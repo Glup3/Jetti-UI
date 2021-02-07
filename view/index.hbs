@@ -1,5 +1,13 @@
 {{> 'partial/navbar' }}
 
-<h1>{{Title}}</h1>
+<div class="container">
+  <h1>{{Title}}</h1>
+
+  <ul>
+    {{#each matches}}
+    <li>{{this.Team1.TeamName.String}} vs {{this.Team2.TeamName.String}}</li>
+    {{/each}}
+  </ul>
+</div>
 
 {{> 'partial/footer' }}
