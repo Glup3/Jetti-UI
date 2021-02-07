@@ -1,13 +1,10 @@
 {{> 'partial/navbar' }}
 
-<div class="container">
-  <h1>{{Title}}</h1>
-
-  <ul>
-    {{#each matches}}
-    <li>{{this.Team1.TeamName.String}} vs {{this.Team2.TeamName.String}}</li>
-    {{/each}}
-  </ul>
+<div class="container my-2">
+  <h1>All Awesome Jetti Matches</h1>
+  {{#each matches}}
+  {{> 'partial/match' this }}
+  {{/each}}
 </div>
 
 {{> 'partial/footer' }}

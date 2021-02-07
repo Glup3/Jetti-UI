@@ -26,7 +26,6 @@ func GetIndex(db *gorm.DB) fiber.Handler {
 			Find(&matches)
 
 		return c.Render("index", fiber.Map{
-			"Title":   "Jetti UI",
 			"matches": matches,
 		}, "layout/main")
 	}
