@@ -1,5 +1,6 @@
 module github.com/glup3/jetti-ui
 
+// +heroku goVersion 1.15
 go 1.15
 
 require (
