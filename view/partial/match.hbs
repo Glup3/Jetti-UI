@@ -3,5 +3,7 @@
     {{> 'partial/team' }}
     <p class="card-text mt-2"><small class="text-muted">{{ CreatedAt }}</small></p>
   </div>
+  {{#if ScreenshotPath.Valid }}
   <img src={{ScreenshotPath.String}} class="card-img-bottom p-2" alt="Match Screenshot">
+  {{/if}}
 </div>

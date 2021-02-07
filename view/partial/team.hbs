@@ -6,15 +6,25 @@
     <div class="col-sm order-last order-sm-first mt-sm-0 mt-4">
       <h2 class="d-inline-block">Team {{ Team2.TeamName.String }}</h2> {{> 'partial/winBadge' result=2 }}
     </div>
-    <div class="col-sm-6 order-first order-sm-first">{{ Team1.Player1.UserTag.String }}</div>
-    <div class="col-sm-6 order-last order-sm-first">{{ Team2.Player1.UserTag.String }}</div>
-    <div class="col-sm-6 order-first order-sm-first">{{ Team1.Player2.UserTag.String }}</div>
-    <div class="col-sm-6 order-last order-sm-first">{{ Team2.Player2.UserTag.String }}</div>
-    <div class="col-sm-6 order-first">{{ Team1.Player3.UserTag.String }}</div>
-    <div class="col-sm-6 order-last">{{ Team2.Player3.UserTag.String }}</div>
-    <div class="col-sm-6 order-first">{{ Team1.Player4.UserTag.String }}</div>
-    <div class="col-sm-6 order-last">{{ Team2.Player4.UserTag.String }}</div>
-    <div class="col-sm-6 order-first">{{ Team1.Player5.UserTag.String }}</div>
-    <div class="col-sm-6 order-last">{{ Team2.Player5.UserTag.String }}</div>
+    <div class="col-sm-6 order-first order-sm-first">
+      {{> 'partial/rank' rank=Team1.Player1.SkillLevel.Float64 }} {{ Team1.Player1.UserTag.String }}</div>
+    <div class="col-sm-6 order-last order-sm-first">
+      {{> 'partial/rank' rank=Team2.Player1.SkillLevel.Float64 }} {{ Team2.Player1.UserTag.String }}</div>
+    <div class="col-sm-6 order-first order-sm-first">
+      {{> 'partial/rank' rank=Team1.Player2.SkillLevel.Float64 }} {{ Team1.Player2.UserTag.String }}</div>
+    <div class="col-sm-6 order-last order-sm-first">
+      {{> 'partial/rank' rank=Team2.Player2.SkillLevel.Float64 }} {{ Team2.Player2.UserTag.String }}</div>
+    <div class="col-sm-6 order-first">
+      {{> 'partial/rank' rank=Team1.Player3.SkillLevel.Float64 }} {{ Team1.Player3.UserTag.String }}</div>
+    <div class="col-sm-6 order-last">
+      {{> 'partial/rank' rank=Team2.Player3.SkillLevel.Float64 }} {{ Team2.Player3.UserTag.String }}</div>
+    <div class="col-sm-6 order-first">
+      {{> 'partial/rank' rank=Team1.Player4.SkillLevel.Float64 }} {{ Team1.Player4.UserTag.String }}</div>
+    <div class="col-sm-6 order-last">
+      {{> 'partial/rank' rank=Team2.Player4.SkillLevel.Float64 }} {{ Team2.Player4.UserTag.String }}</div>
+    <div class="col-sm-6 order-first">
+      {{> 'partial/rank' rank=Team1.Player5.SkillLevel.Float64 }} {{ Team1.Player5.UserTag.String }}</div>
+    <div class="col-sm-6 order-last">
+      {{> 'partial/rank' rank=Team2.Player5.SkillLevel.Float64 }} {{ Team2.Player5.UserTag.String }}</div>
   </div>
 </div>
