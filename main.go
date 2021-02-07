@@ -10,7 +10,7 @@ import (
 
 func main() {
 	engine := handlebars.New("./view", ".hbs")
-	port := config.Get("APP_PORT")
+	port := config.Get("PORT")
 
 	db := database.Connect()
 
@@ -20,5 +20,5 @@ func main() {
 
 	router.SetupRoutes(app, db)
 
-	app.Listen(port)
+	app.Listen(":" + port)
 }
