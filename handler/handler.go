@@ -1,18 +1,16 @@
 package handler
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"gorm.io/gorm"
+)
 
 // GetIndex returns index
-func GetIndex(c *fiber.Ctx) error {
-	return c.Render("index", fiber.Map{
-		"Title": "Hello",
-	}, "layout/main")
-}
+func GetIndex(db *gorm.DB) fiber.Handler {
+	return func(c *fiber.Ctx) error {
 
-// GetHi returns Hi
-func GetHi(c *fiber.Ctx) error {
-	return c.Render("hi", fiber.Map{
-		"Title": "Jetti UI",
-		"Name":  "Glup",
-	}, "layout/main")
+		return c.Render("index", fiber.Map{
+			"Title": "Jetti UI",
+		}, "layout/main")
+	}
 }
