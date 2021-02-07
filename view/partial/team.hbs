@@ -1,10 +1,10 @@
 <div>
   <div class="row">
     <div class="col-sm-6 order-first order-sm-first">
-      <h2>Team {{ Team1.TeamName.String }}</h2>
+      <h2 class="d-inline-block">Team {{ Team1.TeamName.String }}</h2> {{> 'partial/winBadge' result=1 }}
     </div>
     <div class="col-sm order-last order-sm-first mt-sm-0 mt-4">
-      <h2>Team {{ Team2.TeamName.String }}</h2>
+      <h2 class="d-inline-block">Team {{ Team2.TeamName.String }}</h2> {{> 'partial/winBadge' result=2 }}
     </div>
     <div class="col-sm-6 order-first order-sm-first">{{ Team1.Player1.UserTag.String }}</div>
     <div class="col-sm-6 order-last order-sm-first">{{ Team2.Player1.UserTag.String }}</div>
