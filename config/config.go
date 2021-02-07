@@ -9,10 +9,12 @@ import (
 
 // Get return env secret for given key
 func Get(key string) string {
-	err := godotenv.Load(".env")
+	if os.Getenv("APP_ENV") != "production" {
+		err := godotenv.Load(".env")
 
-	if err != nil {
-		log.Fatal("Error loading .env file")
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
 
 	return os.Getenv(key)
