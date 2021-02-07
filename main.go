@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/glup3/jetti-ui/config"
 	"github.com/glup3/jetti-ui/router"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/handlebars"
@@ -8,6 +9,7 @@ import (
 
 func main() {
 	engine := handlebars.New("./view", ".hbs")
+	port := config.Get("APP_PORT")
 
 	app := fiber.New(fiber.Config{
 		Views: engine,
@@ -15,5 +17,5 @@ func main() {
 
 	router.SetupRoutes(app)
 
-	app.Listen(":3000")
+	app.Listen(port)
 }

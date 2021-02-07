@@ -10,6 +10,7 @@ require (
 	github.com/gofiber/fiber/v2 v2.4.1
 	github.com/gofiber/template v1.6.6
 	github.com/imdario/mergo v0.3.11 // indirect
+	github.com/joho/godotenv v1.3.0
 	github.com/klauspost/compress v1.11.7 // indirect
 	github.com/pelletier/go-toml v1.8.1 // indirect
 	github.com/valyala/fasthttp v1.19.0 // indirect
