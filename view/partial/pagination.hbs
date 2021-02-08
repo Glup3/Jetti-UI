@@ -1,0 +1,18 @@
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item {{#equal prevPage 0}}disabled{{/equal}}">
+      <a class="page-link" href="?page={{prevPage}}" tabindex="-1" {{#equal prevPage 0}}aria-disabled="true"
+        {{/equal}}><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    {{#if prevPage }}
+    <li class="page-item"><a class="page-link" href="?page={{prevPage}}">{{prevPage}}</a></li>
+    {{/if}}
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="?page={{page}}">{{page}}</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="?page={{nextPage}}">{{nextPage}}</a></li>
+    <li class="page-item">
+      <a class="page-link" href="?page={{nextPage}}"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+  </ul>
+</nav>

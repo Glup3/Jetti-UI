@@ -4,7 +4,11 @@
   <h1>All Awesome Jetti Matches</h1>
   {{#each matches}}
   {{> 'partial/match' this }}
+  {{else}}
+  <p>No Matches found</p>
   {{/each}}
+
+  {{> 'partial/pagination'}}
 </div>
 
 {{> 'partial/footer' }}
